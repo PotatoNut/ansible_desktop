@@ -15,9 +15,7 @@
         - grub-customizer
         - steam
 
-    community.general.snap:
-      name:
-        - brave
+
    
 
   
