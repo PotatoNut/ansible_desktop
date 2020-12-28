@@ -15,10 +15,10 @@
         - grub-customizer
         - steam
 
-  
-  - name: Snaps
-    community.general.snap:
-      name: brave
+   - name: Install snaps
+     community.general.snap:
+       name:
+         - brave
    
 
   
