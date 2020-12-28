@@ -9,4 +9,38 @@
       name:
         - htop
         - tmux
-  
+        - obs-studio
+        - gnome-tweaks
+        - wallch
+        - grub-customizer
+        - steam
+
+  tasks:
+  - name: Snaps
+    community.general.snap:
+      name: brave
+   
+
+  - name: key for VPN
+      apt_key: keyserver=keyserver.ubuntu.com  id=FDC247B7 state=present
+      become: yes
+
+  - name: Add repository
+    shell: echo 'deb https://repo.windscribe.com/ubuntu bionic main' | sudo tee /etc/apt/sources.list.d/windscribe-repo.list
+    args:
+      warn: no
+
+
+    tasks:
+     - name: Update and upgrade apt packages
+       apt:
+       upgrade: yes
+       update_cache: yes
+       cache_valid_time: 86400 
+
+
+    tasks:
+    - name: VPN
+      package: 
+         name:
+           - windscribe-cli
