@@ -15,7 +15,7 @@
         - grub-customizer
         - steam
 
-  tasks:
+  
   - name: Snaps
     community.general.snap:
       name: brave
