@@ -1,5 +1,5 @@
 ---
-- hosts: pavlomir-S
+- hosts: localhost
   connection: local
   become: true
 
