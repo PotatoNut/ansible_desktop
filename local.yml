@@ -16,9 +16,7 @@
         - steam
 
   - name: install snap
-    community.general.snap:
-      name: brave
-      classic: yes
+    command: snap install brave
    
 
   
